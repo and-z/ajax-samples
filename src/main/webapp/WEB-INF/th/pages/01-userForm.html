@@ -7,7 +7,36 @@
 <body>
 
     <section layout:fragment="content-main">
-        <p>Hello thymeleaf</p>
+
+        <form class="user-form"
+              action="/userNoAjaxThyme" method="post"
+              th:action="@{/userNoAjaxThyme}"
+              th:object="${user}">
+
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label">Enter your first name:</label>
+                    <div class="controls">
+                        <input type="text" th:field="*{firstName}" />
+                        <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Error for the first name field</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Enter your last name:</label>
+                    <div class="controls">
+                        <input type="text" th:field="*{lastName}" />
+                        <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Error for the last name field</p>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="reset" class="btn">Cancel</button>
+                </div>
+            </fieldset>
+
+        </form>
+
     </section>
 
 </body>

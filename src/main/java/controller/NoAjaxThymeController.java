@@ -22,7 +22,7 @@ public class NoAjaxThymeController {
 	@RequestMapping(value="/userNoAjaxThyme",method=RequestMethod.POST)
 	public String processFormNoAjax(Model model, @Valid User user, BindingResult result ){
 		if(result.hasErrors()) {
-			return "01-no-ajax/userForm";
+			return "pages/01-userForm";
 		} 
 		else {
 			return "success";
