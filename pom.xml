@@ -41,19 +41,6 @@
 					</sourceIncludes>
 				</configuration>
 			</plugin>
-			<!--<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
-				<configuration>
-					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>-->
 		</plugins>
 	</build>
 
@@ -85,10 +72,6 @@
 			<version>${spring.framework.version}</version>
 		</dependency>
 
-
-
-
-
 		<!-- Testing -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -102,7 +85,6 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
-
 
 		<!-- Others -->
 		<dependency>
@@ -135,6 +117,11 @@
             <artifactId>thymeleaf-spring3</artifactId>
             <version>2.0.13</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>nz.net.ultraq.web.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+            <version>1.0.3</version>
         </dependency>
 
 	</dependencies>
