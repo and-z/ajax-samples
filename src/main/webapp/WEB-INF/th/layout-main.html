@@ -5,13 +5,16 @@
 
 <head>
     <title>Thymeleaf Examples</title>
+    <link rel="stylesheet" href="../../style/app.css" th:href="@{/style/app.css}"/>
 </head>
 
 <body>
 
-    <section layout:fragment="content-main">
-        <p>Main content here</p>
-    </section>
+    <div class="container">
+        <section layout:fragment="content-main">
+            <p>Main content here</p>
+        </section>
+    </div>
 
 </body>
 </html>
