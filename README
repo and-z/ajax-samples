@@ -1,10 +1,7 @@
+This fork aimed to reimplement the original functionality using the Thymeleaf templating engine and its extension Dialects.
+
+Unfortunately it is not possible to simple run JSP based views beside the Thymeleaf based ones due to ViewResolver chaining issue (see http://forum.thymeleaf.org/Chaining-view-resolvers-td3295026.html).
+So I will not remove the original JSP and Java files, so they can be easily compared to the Thymeleaf related files.
+However both view technologies could be combined using Apache Tiles and the appropriate Thymeleaf extension (https://github.com/thymeleaf/thymeleaf-extras-tiles2).
+
 Before installing those samples please make sure that Maven and git have been installed and configured properly on your local system.
-
-You can do:
-
-git clone git@github.com:michaelisvy/ajax-samples.git
-cd ajax-samples
-mvn eclipse:eclipse
-
-Your project is now ready to be imported into Eclipse.
-File -> Import -> Existing project into Eclipse
