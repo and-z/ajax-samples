@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <title>Fragments page</title>
+    <link rel="stylesheet" href="../../style/app.css" th:href="@{/style/app.css}"/>
+</head>
+
+<body>
+
+    <div layout:fragment="input-text">
+        <label class="control-label" th:text="${labelText}">Label</label>
+        <input type="text" th:field="*{__${fieldName}__}" />
+        <span class="help-inline">
+            <p th:if="${#fields.hasErrors('__${fieldName}__')}" th:errors="*{__${fieldName}__}}">Error message</p>
+        </span>
+    </div>
+
+</body>
+
+</html>
