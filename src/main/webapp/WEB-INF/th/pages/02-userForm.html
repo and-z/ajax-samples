@@ -6,6 +6,7 @@
 
 <head>
     <title>Create a new user</title>
+    <link href="../../../style/bootstrap.min.css" th:href="@{/style/bootstrap.min.css}" rel="stylesheet" />
     <script src="../../../js/jquery.js" th:src="@{/js/jquery.js}" />
     <script src="../../../js/02-userForm.js" th:src="@{/js/02-userForm.js}" />
 </head>
@@ -22,10 +23,8 @@
             <fieldset>
                 <div class="control-group" id="firstNameControlGroup">
                     <div class="controls">
-                        <div class="controls">
-                            <div layout:include="fragments/form-elements::input-text"
-                                 th:with="fieldName='firstName', labelText='Enter your first name:'" th:remove="tag" />
-                        </div>
+                        <div layout:include="fragments/form-elements::input-text"
+                             th:with="fieldName='firstName', labelText='Enter your first name:'" th:remove="tag" />
                     </div>
                 </div>
                 <div class="control-group" id="lastNameControlGroup">
